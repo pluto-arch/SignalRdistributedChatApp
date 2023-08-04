@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\personal\\code_snippet\\DistributedChatApp\\test\\ConsoleTest\\ConsoleTest.csproj": {}
+  },
+  "projects": {
+    "E:\\personal\\code_snippet\\DistributedChatApp\\test\\ConsoleTest\\ConsoleTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\personal\\code_snippet\\DistributedChatApp\\test\\ConsoleTest\\ConsoleTest.csproj",
+        "projectName": "ConsoleTest",
+        "projectPath": "E:\\personal\\code_snippet\\DistributedChatApp\\test\\ConsoleTest\\ConsoleTest.csproj",
+        "packagesPath": "C:\\Users\\62052\\.nuget\\packages\\",
+        "outputPath": "E:\\personal\\code_snippet\\DistributedChatApp\\test\\ConsoleTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "E:\\personal\\code_snippet\\DistributedChatApp\\NuGet.Config",
+          "C:\\Users\\62052\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.dotnetydd.com/v3/index.json": {},
+          "https://nuget.dotnetydd.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[7.0.9, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.CodeAnalysis.NetAnalyzers": {
+              "target": "Package",
+              "version": "[7.0.3, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": "[12.0.1, )",
+            "CommunityToolkit.Diagnostics": "[8.2.0, )",
+            "Dapper": "[2.0.143, )",
+            "Dapper.SimpleCRUD": "[2.3.0, )",
+            "Dncy.DependencyInjection.Generator": "[1.1.0, )",
+            "Dncy.EventBus.Abstract": "[1.0.4, )",
+            "Dncy.EventBus.RabbitMQ": "[1.0.4, )",
+            "Dncy.EventBus.SubscribeActivator": "[1.0.5, )",
+            "Dncy.MQMessageActivator": "[2.0.0, )",
+            "Dncy.Permission": "[2.1.1, )",
+            "Dncy.Specifications": "[1.0.1, )",
+            "Dncy.Specifications.EntityFrameworkCore": "[1.0.2, )",
+            "Dncy.StackExchangeRedis": "[1.0.1, )",
+            "Dncy.Tools.Core": "[2.0.4, )",
+            "Dncy.Tools.SnowFlake": "[1.0.5, )",
+            "FluentValidation": "[11.6.0, )",
+            "MediatR": "[12.0.1, )",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "[7.0.5, )",
+            "Microsoft.AspNetCore.Components.WebAssembly": "[6.0.19, )",
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": "[6.0.19, )",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "[7.0.5, )",
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "[7.0.5, )",
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "[7.0.5, )",
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.0.0, )",
+            "Microsoft.AspNetCore.SignalR.Client": "[7.0.9, )",
+            "Microsoft.CodeAnalysis.NetAnalyzers": "[7.0.3, )",
+            "Microsoft.EntityFrameworkCore": "[7.0.5, )",
+            "Microsoft.EntityFrameworkCore.Relational": "[7.0.5, )",
+            "Microsoft.EntityFrameworkCore.SqlServer": "[7.0.5, )",
+            "Microsoft.EntityFrameworkCore.Tools": "[7.0.5, )",
+            "Microsoft.Extensions.DependencyInjection": "[7.0.0, )",
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": "[7.0.6, )",
+            "Polly": "[7.2.3, )",
+            "Serilog.AspNetCore": "[6.1.0, )",
+            "Serilog.Enrichers.Environment": "[2.2.0, )",
+            "Serilog.Enrichers.Process": "[2.0.2, )",
+            "Serilog.Enrichers.Sensitive": "[1.7.2, )",
+            "Serilog.Enrichers.Thread": "[3.1.0, )",
+            "Serilog.Extensions.Logging": "[3.1.0, )",
+            "Serilog.Sinks.Async": "[1.5.0, )",
+            "Swashbuckle.AspNetCore": "[6.5.0, )"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net70</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+	<ItemGroup>
+        <PackageReference Include="CommunityToolkit.Diagnostics" />
+        <PackageReference Include="Dncy.DependencyInjection.Generator" />
+        <PackageReference Include="Dncy.Permission" />
+        <PackageReference Include="Dncy.Specifications" />
+        <PackageReference Include="Dncy.Tools.Core" />
+        <PackageReference Include="Dncy.Tools.SnowFlake" />
+        <PackageReference Include="MediatR" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Aggregates\System\" />
+        <Folder Include="DomainEvents\" />
+        <Folder Include="Exceptions\" />
+        <Folder Include="Collections\" />
+        <Folder Include="Services\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="ChatService.Api.xml" />
+    </ItemGroup>
+    
+</Project>
