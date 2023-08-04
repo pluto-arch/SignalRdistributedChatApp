@@ -31,7 +31,7 @@ namespace ChatService.Api.Hubs
         public ChatHub(RedisClientFactory factory,IConfiguration configuration)
         {
             _redisFactory = factory;
-            _configuration = configuration;
+            _configuration = configuration; 
         }
         
         
