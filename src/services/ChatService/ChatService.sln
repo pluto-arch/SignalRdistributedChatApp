@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{351A8F51-54E8-45B4-8CEF-893DD387C615}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A2AD551-D740-4141-9AF3-2F0F009807C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C7EF86BE-FE86-4F28-9901-4B47B25EE032}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "entry", "entry", "{FC6D2445-EAD4-4831-8267-8E113AB85AD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatService.Application", "src\ChatService.Application\ChatService.Application.csproj", "{A449BC68-7BF3-4306-B73F-9045D0D20777}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatService.Domain", "src\ChatService.Domain\ChatService.Domain.csproj", "{0139B8F5-7C59-49A2-BA1A-E11CAC4A7571}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatService.Infra", "src\ChatService.Infra\ChatService.Infra.csproj", "{C84EBBAF-F2D3-458F-84BD-4D373A7A2715}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48BB8819-9812-4C8B-8F8E-F0EA9DC59E7D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		dotnet-tools.json = dotnet-tools.json
+		global.json = global.json
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatService.Api", "entry\ChatService.Api\ChatService.Api.csproj", "{D9EBAA94-2FE3-4A96-9078-4F5286CC0927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{351A8F51-54E8-45B4-8CEF-893DD387C615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351A8F51-54E8-45B4-8CEF-893DD387C615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351A8F51-54E8-45B4-8CEF-893DD387C615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351A8F51-54E8-45B4-8CEF-893DD387C615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A449BC68-7BF3-4306-B73F-9045D0D20777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A449BC68-7BF3-4306-B73F-9045D0D20777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A449BC68-7BF3-4306-B73F-9045D0D20777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A449BC68-7BF3-4306-B73F-9045D0D20777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0139B8F5-7C59-49A2-BA1A-E11CAC4A7571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0139B8F5-7C59-49A2-BA1A-E11CAC4A7571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0139B8F5-7C59-49A2-BA1A-E11CAC4A7571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0139B8F5-7C59-49A2-BA1A-E11CAC4A7571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84EBBAF-F2D3-458F-84BD-4D373A7A2715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84EBBAF-F2D3-458F-84BD-4D373A7A2715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84EBBAF-F2D3-458F-84BD-4D373A7A2715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84EBBAF-F2D3-458F-84BD-4D373A7A2715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9EBAA94-2FE3-4A96-9078-4F5286CC0927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EBAA94-2FE3-4A96-9078-4F5286CC0927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EBAA94-2FE3-4A96-9078-4F5286CC0927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EBAA94-2FE3-4A96-9078-4F5286CC0927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A449BC68-7BF3-4306-B73F-9045D0D20777} = {5A2AD551-D740-4141-9AF3-2F0F009807C0}
+		{0139B8F5-7C59-49A2-BA1A-E11CAC4A7571} = {5A2AD551-D740-4141-9AF3-2F0F009807C0}
+		{C84EBBAF-F2D3-458F-84BD-4D373A7A2715} = {5A2AD551-D740-4141-9AF3-2F0F009807C0}
+		{D9EBAA94-2FE3-4A96-9078-4F5286CC0927} = {FC6D2445-EAD4-4831-8267-8E113AB85AD2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC9D0D11-325F-4971-B20A-7ABB3058DA5E}
+	EndGlobalSection
+EndGlobal

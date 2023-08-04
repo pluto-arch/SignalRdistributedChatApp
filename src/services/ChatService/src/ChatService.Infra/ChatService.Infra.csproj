@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net70</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ChatService.Domain\ChatService.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" />
+		<PackageReference Include="Dncy.EventBus.Abstract" />
+		<PackageReference Include="Dncy.EventBus.RabbitMQ" />
+		<PackageReference Include="Dncy.EventBus.SubscribeActivator" />
+		<PackageReference Include="Dncy.Specifications.EntityFrameworkCore" />
+		<PackageReference Include="Dncy.StackExchangeRedis" />
+		<PackageReference Include="FluentValidation" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+		<PackageReference Include="Serilog.Extensions.Logging" />
+		<PackageReference Include="Polly" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Constants\" />
+	  <Folder Include="Migrations\" />
+	  <Folder Include="Global\" />
+	  <Folder Include="Models\" />
+	</ItemGroup>
+
+</Project>

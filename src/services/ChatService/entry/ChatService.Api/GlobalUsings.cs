@@ -1,0 +1,14 @@
+﻿global using ChatService.Api.Constants;
+global using ChatService.Api.Infra;
+global using ChatService.Domain.Collections;
+global using Microsoft.AspNetCore.HttpOverrides;
+global using Microsoft.AspNetCore.Mvc;
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Serialization;
+global using Serilog;
+global using System.Net.Mime;
+global using System.Text;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.Options;
+global using CommunityToolkit.Diagnostics;
+global using MediatR;

@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  chatservice.api:
+    image: ${DOCKER_REGISTRY-}chatserviceapi
+    build:
+      context: .
+      dockerfile: ./entry/ChatService.Api/Dockerfile
