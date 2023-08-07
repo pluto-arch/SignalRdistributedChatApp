@@ -1,5 +1,7 @@
-﻿namespace ChatService.Api.Models
+﻿
+namespace ChatService.Api.Models
 {
+
     public class SignalRSessionModel
     {
         /// <summary>

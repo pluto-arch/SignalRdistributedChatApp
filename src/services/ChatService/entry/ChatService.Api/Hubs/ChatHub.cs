@@ -23,15 +23,13 @@ namespace ChatService.Api.Hubs
     {
 
         private readonly RedisClientFactory _redisFactory;
-        private readonly IConfiguration _configuration;
 
         public const string REDIS_CACHE_KEY = "CHAT_APP";
         
         
-        public ChatHub(RedisClientFactory factory,IConfiguration configuration)
+        public ChatHub(RedisClientFactory factory)
         {
             _redisFactory = factory;
-            _configuration = configuration; 
         }
         
         
@@ -51,7 +49,6 @@ namespace ChatService.Api.Hubs
             {
                 await redis.Db.HashDeleteAsync(REDIS_CACHE_KEY, userId);
             });
-
             redis.Db.HashSetAsync(REDIS_CACHE_KEY, userId, JsonConvert.SerializeObject(newValue));
             return base.OnConnectedAsync();
         }

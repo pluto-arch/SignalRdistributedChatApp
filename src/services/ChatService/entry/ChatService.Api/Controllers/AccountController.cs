@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 
 namespace ChatService.Api.Controllers
 {
@@ -39,13 +40,23 @@ namespace ChatService.Api.Controllers
             }
         };
 
+        private string GetRasPublishKey()
+        {
+            using (var rsa=RSA.Create())
+            {
+                var publishKey=rsa.ExportRSAPublicKey();
+                return Convert.ToBase64String(publishKey);
+            }
+        }
+
+
         /// <summary>
         /// 获取jwt token
         /// </summary>
         /// <returns></returns>
         [HttpPost]
         [AllowAnonymous]
-        public ResultDto Token([Required, FromForm(Name = "userName")] string user, [Required, FromForm(Name = "password")] string pwd)
+        public async Task<ResultDto> SignInAsync([Required, FromForm(Name = "userName")] string user, [Required, FromForm(Name = "password")] string pwd)
         {
             var u = Users.FirstOrDefault(x => x.UserName == user && x.Password == pwd);
             if (u == null)
@@ -55,10 +66,10 @@ namespace ChatService.Api.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name, u.UserName),
-                new Claim(ClaimTypes.NameIdentifier, u.Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, u.Id),
                 new Claim(ClaimTypes.Role, u.Role),
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("715B59F3CDB1CF8BC3E7C8F13794CEA9"));
+            var key = new SymmetricSecurityKey("715B59F3CDB1CF8BC3E7C8F13794CEA9"u8.ToArray());
             var token = new JwtSecurityToken(
                 issuer: "pluto",
                 audience: "123",
@@ -67,10 +78,10 @@ namespace ChatService.Api.Controllers
                 claims: claims,
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
             );
-            return this.Success(new
+            return await Task.FromResult(this.Success(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token)
-            }, $"{user} 登录成功");
+            }));
         }
 
 

@@ -10,6 +10,12 @@
 		<SatelliteResourceLanguages>zh-Hans;zh-CN</SatelliteResourceLanguages>
 		<DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
 		<RuntimeIdentifiers>linux-x64;win-x64</RuntimeIdentifiers>
+		<!--自包含运行时(独立发布)-->
+		<SelfContained>true</SelfContained>
+		<!--单文件发布-->
+		<PublishSingleFile>true</PublishSingleFile>
+		<!--进行裁剪-->
+		<PublishTrimmed>true</PublishTrimmed>
 	</PropertyGroup>
 
 	<ItemGroup>

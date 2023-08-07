@@ -11,6 +11,8 @@ using Microsoft.Extensions.Primitives;
 using System.Threading.RateLimiting;
 using ChatService.Api.Hubs;
 using Dncy.EventBus.RabbitMQ;
+using ChatService.Infra.Constants;
+using System.Security.Cryptography;
 
 namespace ChatService.Api
 {
@@ -71,6 +73,8 @@ namespace ChatService.Api
             services.AddSignalR(options =>
             {
             });
+
+            services.AddSingleton<RSACryptoServiceProvider>(s=>new RSACryptoServiceProvider(2048));
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
@@ -78,7 +82,7 @@ namespace ChatService.Api
 
             var serverAddressesFeature = app.ServerFeatures.Get<IServerAddressesFeature>();
             var address = serverAddressesFeature?.Addresses;
-            Log.Logger.Information("应用程序运行地址: {@Address}. net version:{version}. 环境:{envName}", address, Environment.Version,env.EnvironmentName);
+            Log.Logger.Information("应用程序运行地址: {@Address}. net version:{version}. 环境:{envName}. HostName:{hostName}", address, Environment.Version,env.EnvironmentName,EnvironmentConstants.EnvHostName);
             app.ApplicationServices.StartBasicConsume();
 
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();

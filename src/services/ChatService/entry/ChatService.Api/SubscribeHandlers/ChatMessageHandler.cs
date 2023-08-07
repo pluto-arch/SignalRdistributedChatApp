@@ -47,22 +47,11 @@ namespace ChatService.Api.SubscribeHandlers
         [Subscribe("handle_msg",nameof(EventBusRabbitMQ))]
         public async Task UserEnableEventHandler(ChatMessageIntegrationEvent customMessage)
         {
-            _logger.LogInformation($"收到消息[s1] : {customMessage?.User}");
+            _logger.LogInformation($"收到消息: {customMessage?.User} to {customMessage.ToUser}");
             await SendMessage(customMessage);
         }
-        
-        // [Subscribe("handle_msg_s2",nameof(EventBusRabbitMQ))]
-        // public async Task UserEnableEventHandlerS2(ChatMessageIntegrationEvent customMessage)
-        // {
-        //     _logger.LogInformation($"收到消息[s2]  : {customMessage?.User}");
-        //     await SendMessage(customMessage);
-        // }
-        //
-        // [Subscribe("handle_msg_s3",nameof(EventBusRabbitMQ))]
-        // public async Task UserEnableEventHandlerS3(ChatMessageIntegrationEvent customMessage)
-        // {
-        //     _logger.LogInformation($"收到消息[s3]  : {customMessage?.User}");
-        //     await SendMessage(customMessage);
-        // }
+
+
+
     }
 }
