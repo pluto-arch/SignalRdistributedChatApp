@@ -46,9 +46,9 @@ namespace ChatService.Infra
                 o.CommandMap = CommandMap.Default;
                 o.DefaultDatabase = 0;
                 o.ClientName = "docker01";
-                o.Password = "";
+                o.Password = "redispw";
                 o.KeepAlive = 180;
-                o.EndPoints.Add("localhost",6379);
+                o.EndPoints.Add("localhost", 32768);
             });
             services.AddRedisClientFactory();
         }

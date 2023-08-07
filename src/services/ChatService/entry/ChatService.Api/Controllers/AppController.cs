@@ -32,13 +32,9 @@ namespace ChatService.Api.Controllers
         public async Task<ResultDto> InitAsync()
         {
             var publicKey = await GetRasPublishKey();
-            StringBuilder publicKeyBuilder = new StringBuilder();
-            publicKeyBuilder.AppendLine("-----BEGIN PUBLIC KEY-----");
-            publicKeyBuilder.AppendLine(publicKey);
-            publicKeyBuilder.AppendLine("-----END PUBLIC KEY-----");
             return await Task.FromResult(this.Success(new
             {
-                sk = publicKeyBuilder.ToString()
+                sk = $"-----BEGIN RSA PUBLIC KEY-----\n{publicKey}\n-----END RSA PUBLIC KEY-----"
             }));
         }
 
@@ -72,6 +68,17 @@ namespace ChatService.Api.Controllers
         [HttpPost]
         public async Task<ResultDto> ConnAsync(Reqw request)
         {
+
+            var rsaInfo = await _redis.Db.HashGetAllAsync("RSA");
+            if (rsaInfo.Any())
+            {
+                _rsaProvider.ImportRSAPrivateKey(Convert.FromBase64String(rsaInfo.First(x => x.Name == "privateKey").Value), out _);
+            }
+
+            // 解密公钥假的数据
+            byte[] symmetricKey = _rsaProvider.Decrypt(Convert.FromBase64String(request.EncryptedKey), true);
+            var aesInfo = Encoding.UTF8.GetString(symmetricKey);
+
             return this.Success("ok");
         }
 
